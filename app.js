@@ -23,7 +23,8 @@ app.post("/adde",async(request,response)=>{
 })
 
 app.get("/viewe",async(request,response)=>{
-    
+    let result=await employeeModel.find()
+    response.json(result)
 })
 
 app.listen(3001,()=>{
